@@ -25,14 +25,11 @@ router.post(
 
     router.post('/generar-reporte', async (req, res) => {
         try {
-          // Obtener las empresas
           const empresas = await obtenerEmpresas();
       
           const directorioReportes = './reportes';
-          // Llamada a la función para generar el reporte
           const filePath = await generarReporteExcel(empresas, directorioReportes);
       
-          // Envía el archivo Excel como respuesta
           res.download(filePath, 'reporte_empresas.xlsx', (err) => {
             if (err) {
               console.error('Error al enviar el archivo:', err);
@@ -43,7 +40,6 @@ router.post(
           });
       
         } catch (error) {
-          // Manejo de errores
           console.error('Error al generar el reporte de empresas:', error);
           res.status(500).json({ mensaje: 'Error al generar el reporte de empresas' });
         }
