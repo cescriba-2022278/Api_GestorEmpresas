@@ -7,6 +7,7 @@ import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
 import usuarioRoutes from '../src/usuario/usuario.routes.js';
 import loginRoutes from '../src/auth/login.routes.js';
+import empresaRoutes from '../src/empresa/empresa.routes.js';
 
 class Server{
     constructor(){
@@ -14,6 +15,7 @@ class Server{
         this.port = process.env.PORT;
         this.usuarioPath = '/coperex/v1/usuario';
         this.loginPath = '/coperex/v2/login';
+        this.empresaPath = '/coperex/v3/empresas';
 
         this.middlewares();
         this.conectarDB();
@@ -35,6 +37,7 @@ class Server{
     routes(){
         this.app.use(this.usuarioPath, usuarioRoutes);
         this.app.use(this.loginPath, loginRoutes);
+        this.app.use(this.empresaPath, empresaRoutes);
     }
 
     listen(){
