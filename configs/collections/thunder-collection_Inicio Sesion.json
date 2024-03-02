@@ -1,0 +1,47 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Inicio Sesion",
+    "dateExported": "2024-03-02T04:11:04.206Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "345cc0d4-6989-493f-a207-1186a453aba2",
+            "colId": "3eb2ba03-f42f-4334-8be9-a600563711ba",
+            "containerId": "",
+            "name": "registrar",
+            "url": "http://localhost:3000/coperex/v1/usuario",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-02T02:29:16.552Z",
+            "modified": "2024-03-02T03:55:16.219Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Cesar Escriba\",\n  \"correo\": \"cescriba@gmail.com\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bb8ccfdd-d4bb-4557-9972-4e82bf804a91",
+            "colId": "3eb2ba03-f42f-4334-8be9-a600563711ba",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:3000/coperex/v2/login/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-03-02T03:55:59.223Z",
+            "modified": "2024-03-02T04:02:00.556Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"correo\": \"cescriba@gmail.com\",\n  \"password\": \"123456\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

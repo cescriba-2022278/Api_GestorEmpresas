@@ -12,8 +12,8 @@ class Server{
     constructor(){
         this.app = express();
         this.port = process.env.PORT;
-        this.usuarioPath = '/api/v1/usuario';
-        this.loginPath = '/api/v2/login';
+        this.usuarioPath = '/coperex/v1/usuario';
+        this.loginPath = '/coperex/v2/login';
 
         this.middlewares();
         this.conectarDB();
