@@ -1,0 +1,77 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "EmpresasColleccion",
+    "dateExported": "2024-03-02T07:12:41.005Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f93ef6d3-d349-4fa7-96d2-582f5654b2d7",
+            "colId": "fa4e8869-e4a1-4b6d-98f4-659daacb97b2",
+            "containerId": "",
+            "name": "Registro de empresas",
+            "url": "http://localhost:3000/coperex/v3/empresas",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-02T05:23:44.168Z",
+            "modified": "2024-03-02T05:45:08.340Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Z empresa\",\n  \"nivelImpacto\": \"tecnologia\",\n  \"yearsTrayectoria\": \"19\",\n  \"categoriaEmpresarial\": \"Multinacional\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b26b8447-dbf5-45dd-b1ae-614f94b717c2",
+            "colId": "fa4e8869-e4a1-4b6d-98f4-659daacb97b2",
+            "containerId": "",
+            "name": "Visualización de empresas",
+            "url": "http://localhost:3000/coperex/v3/empresas?sort=AZ&nivelImpacto=tecnologia&yearsTrayectoria=10&categoriaEmpresarial=Multinacional",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-02T05:45:40.414Z",
+            "modified": "2024-03-02T05:55:55.783Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "sort",
+                    "value": "AZ",
+                    "isPath": false
+                },
+                {
+                    "name": "nivelImpacto",
+                    "value": "tecnologia",
+                    "isPath": false
+                },
+                {
+                    "name": "yearsTrayectoria",
+                    "value": "10",
+                    "isPath": false
+                },
+                {
+                    "name": "categoriaEmpresarial",
+                    "value": "Multinacional",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "bee1391d-0f63-46e6-a61e-012cea2106be",
+            "colId": "fa4e8869-e4a1-4b6d-98f4-659daacb97b2",
+            "containerId": "",
+            "name": "Generar Reporte",
+            "url": "http://localhost:3000/coperex/v3/empresas/generar-reporte",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-02T06:17:56.520Z",
+            "modified": "2024-03-02T06:51:38.216Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
